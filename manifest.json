@@ -1,0 +1,35 @@
+{
+    "name": "Tab volume controller",
+    "description": "Control the volume of each tab individually!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["tabs", "activeTab", "tabCapture", "storage"],
+    "background": {
+        "service_worker": "loader.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["assets/js/content.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["/assets/js/content.js"],
+        "matches": ["<all_urls>"]
+    }],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "assets/images/icon.png",
+            "32": "assets/images/icon.png",
+            "48": "assets/images/icon.png",
+            "128": "assets/images/icon.png"
+        }
+    },
+    "icons": {
+        "16": "assets/images/icon.png",
+        "32": "assets/images/icon.png",
+        "48": "assets/images/icon.png",
+        "128": "assets/images/icon.png"
+    }
+}

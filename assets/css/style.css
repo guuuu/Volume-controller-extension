@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    background-color: #EEEEEE;
+    width: 300px;
+    height: 600px;
+}
+
+body{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    width: 60%;
+    height: 2px;
+    border: 1px solid black;
+    margin: 10px 20%;
+}
+
+.row{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.row .left{
+    /* border: 2px solid yellow; */
+    width: 20%;
+    height: 50px;
+    object-fit: contain;
+    float: left
+}
+
+.row .mid{
+    /* border: 2px solid purple; */
+    width: 60%;
+    height: 50px;
+    float: left;
+}
+
+.row .mid .top{
+    /* border: 2px solid orange; */
+    width: 100%;
+    height: 25px;
+    top: 0;
+    text-align: center;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row .mid .bottom{
+    /* border: 2px solid salmon; */
+    width: 100%;
+    height: 25px;
+    bottom: 0;
+    text-align: center;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.row .right{
+    /* border: 2px solid yellow; */
+    width: 20%;
+    height: 50px;
+    object-fit: contain;
+    float: right;
+}
+
+.row .left, .row .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slider{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 25%;
+    -webkit-appearance: none;
+    /* background-color: #00ddff; */
+    background-color: #00b5d1;
+    border-radius: 10px;
+    appearance: none;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: black;
+    cursor: pointer;
+}
+
+.slider:disabled {
+    background-color: #555555;
+}
+
+.slider:hover{
+    opacity: 1;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.cont{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    float: left;
+    border-right: 2px solid black;
+}
+
+.cont:last-child{
+    border: none;
+}
+
+.cont .l{
+    /* border: 2px solid limegreen; */
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cont .r{
+    /* border: 2px solid purple; */
+    width: 70%;
+    height: 100%;
+    padding: 5px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.cont .l .check{
+    width: 65%;
+    height: 65%;
+    border-radius: 3px;
+    /* background-color: rgba(255, 0, 0, 0.7); */
+    background-color: rgba(190, 190, 190, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    -webkit-transition: .2s;
+}
+
+.cont .l .check img{
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0,0,0,0);
+}
+
+.cont .l .check:hover, .cont .r .check:hover{
+    cursor: pointer;
+    background-color: rgba(170, 170, 170, 1);
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.custom_row{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.footer, .footer a{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    z-index: 10;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+*/
